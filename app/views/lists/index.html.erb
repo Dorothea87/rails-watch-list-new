@@ -1,4 +1,13 @@
 <h1>My movie lists</h1>
+  <div class="container mt-5">
+    <h2>All my movie lists:</h1>
+      <ul>
+      <% @lists.each do |list| %>
+         <li> <%= link_to list.name, list_path(list) %></li>
+      <% end %>
+      </ul>
+  </div>
+
 <div class="container mt-5">
 <h2>Add a new list here:</h1>
 <%= simple_form_for(@list) do |f| %>
